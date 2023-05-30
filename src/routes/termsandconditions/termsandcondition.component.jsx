@@ -1,3 +1,5 @@
+import Reveal from "../../utility/reveal";
+
 const TermsAndConditions = () => {
   return (
     <div className="px-44 leading-normal text-medium">

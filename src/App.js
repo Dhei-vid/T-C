@@ -8,7 +8,7 @@ import Insight from "./routes/insight/insight.component";
 import Contact from "./components/contact/contact.component";
 import Footer from "./components/footer/footer.component";
 import Client from "./routes/clients/clients.component";
-import TermsAndConditions from "./routes/terms&conditions/terms&condition.component";
+import TermsAndConditions from "./routes/termsandconditions/termsandcondition.component";
 import Privacy from "./routes/privacy/privacy.component";
 
 import AfricaDigital from "./routes/insight/africa-digital.component";
