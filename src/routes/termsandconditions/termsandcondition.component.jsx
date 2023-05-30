@@ -4,9 +4,11 @@ const TermsAndConditions = () => {
   return (
     <div className="px-44 leading-normal text-medium">
       <div className="mb-8">
-        <h2 className="text-7xl font-bold leading-tight font-heading">
-          Terms & Conditions
-        </h2>
+        <Reveal delay={0.5} y1={-50} y2={0}>
+          <h2 className="text-7xl font-bold leading-tight font-heading">
+            Terms & Conditions
+          </h2>
+        </Reveal>
       </div>
 
       <div className="text-lg pr-16 ">

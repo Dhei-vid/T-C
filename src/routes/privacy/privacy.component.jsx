@@ -1,11 +1,15 @@
+import Reveal from "../../utility/reveal";
+
 const Privacy = () => {
   return (
     <div className="px-44 text-lg">
       <div className="mb-8">
-        <h2 className="text-7xl font-bold leading-tight font-heading  pb-8">
-          Privacy Policy
-        </h2>
-        <p className="pb-6">Effective date: 2022-10-15</p>
+        <Reveal delay={0.5} y1={-50} y2={0}>
+          <h2 className="text-7xl font-bold leading-tight font-heading  pb-8">
+            Privacy Policy
+          </h2>
+          <p className="pb-6">Effective date: 2022-10-15</p>
+        </Reveal>
       </div>
 
       <div className="pt-6 pr-32">
