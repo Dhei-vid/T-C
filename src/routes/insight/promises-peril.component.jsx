@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { useCallback } from "react";
 
+import Reveal from "../../utility/reveal";
 import InsightPreview from "../../components/insights-preview/insights.preview.component";
 
 const PromisesPeril = () => {
@@ -15,16 +16,18 @@ const PromisesPeril = () => {
       {/* INTRO */}
       <div className="px-44">
         <div className="px-6 mb-8 border-b-2 border-black">
-          <p
-            className="underline cursor-pointer hover:text-gray-500"
-            onClick={InsightNavigate}
-          >
-            Back to Our Insights
-          </p>
-          <h2 className="text-6xl font-bold leading-tight">
-            The Promises and perils of Africa's digital revolution
-          </h2>
-          <p className="pb-6">Posted October 04, 2022</p>
+          <Reveal delay={0.5} y1={-50} y2={0}>
+            <p
+              className="underline cursor-pointer hover:text-gray-500"
+              onClick={InsightNavigate}
+            >
+              Back to Our Insights
+            </p>
+            <h2 className="text-6xl font-bold leading-tight">
+              The Promises and perils of Africa's digital revolution
+            </h2>
+            <p className="pb-6">Posted October 04, 2022</p>
+          </Reveal>
         </div>
       </div>
 

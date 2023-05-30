@@ -1,12 +1,15 @@
 import InsightPreview from "../../components/insights-preview/insights.preview.component";
+import Reveal from "../../utility/reveal";
 
 const Insight = () => {
   return (
     <>
       <div className="px-44 pb-8">
-        <h1 className="text-7xl font-bold leading-none tracking-wider">
-          Our Insights
-        </h1>
+        <Reveal delay={0.5} y1={-50} y2={0}>
+          <h1 className="text-7xl font-bold leading-none tracking-wider">
+            Our Insights
+          </h1>
+        </Reveal>
       </div>
 
       <div className="grid px-36 pb-8">
