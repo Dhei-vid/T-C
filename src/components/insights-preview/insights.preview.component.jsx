@@ -22,9 +22,9 @@ const InsightPreview = ({
         >
           <div
             onClick={() => redirect("/insights/africa-digital")}
-            className={`min-h-[65vh] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black`}
+            className={`h-[65vh] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black`}
           >
-            <h3 className="text-3xl font-bold tracking-wider mb-3 hover:underline">
+            <h3 className="md:text-3xl text-2xl font-bold tracking-wider mb-3 hover:underline">
               Tuning into Africa's Digital Transformation
             </h3>
             <button className="uppercase pb-6">Learn More</button>
@@ -38,7 +38,7 @@ const InsightPreview = ({
             onClick={() => redirect("/insights/lessons-from-india")}
             className={`min-h-[65vh] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black `}
           >
-            <h3 className="text-3xl font-bold tracking-wider mb-3 hover:underline">
+            <h3 className="md:text-3xl text-2xl font-bold tracking-wider mb-3 hover:underline">
               Digital Transformation in Africa: three lessons from India's
               experience
             </h3>
@@ -51,9 +51,9 @@ const InsightPreview = ({
         >
           <div
             onClick={() => redirect("/insights/promises")}
-            className={`min-h-[65vh] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black`}
+            className={`h-[65vh] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black`}
           >
-            <h3 className="text-3xl font-bold tracking-wider mb-3 hover:underline">
+            <h3 className="md:text-3xl text-2xl font-bold tracking-wider mb-3 hover:underline">
               The Promises and perils of Africa's digital revolution
             </h3>
             <button className="uppercase pb-6">Learn More</button>
@@ -65,9 +65,9 @@ const InsightPreview = ({
         >
           <div
             onClick={() => redirect("/insights/jack-of-all-trades")}
-            className={`min-h-[65vh] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black`}
+            className={`h-[65vh] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black`}
           >
-            <h3 className="text-3xl font-bold tracking-wider mb-3 hover:underline">
+            <h3 className="md:text-3xl text-2xl font-bold tracking-wider mb-3 hover:underline">
               Improving Africa's digital innovation ecosystem: five ways forward
             </h3>
             <button className="uppercase pb-6">Learn More</button>
@@ -77,7 +77,7 @@ const InsightPreview = ({
 
       {/* More insights */}
       <div
-        className={`flex justify-end underline hover:text-gray-500 text-xl md:text-xl py-10 pr-44 ${moreInsights}`}
+        className={`flex justify-end underline hover:text-gray-500 text-xl md:text-xl py-10 md:pr-44 pr-6 ${moreInsights}`}
       >
         <p
           onClick={() => redirect("insights")}
