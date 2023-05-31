@@ -1,11 +1,29 @@
 import { useNavigate } from "react-router-dom";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import Reveal from "../../utility/reveal";
 import InsightPreview from "../../components/insights-preview/insights.preview.component";
 
 const JackOfAllTrades = () => {
   const navigate = useNavigate();
+  const [dimensions, setDimensions] = useState(
+    {
+      height: window.innerHeight,
+      width: window.innerWidth,
+    },
+    []
+  );
+
+  useEffect(() => {
+    const handleScreenWidth = () => {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+    };
+
+    window.addEventListener("resize", handleScreenWidth);
+  }, []);
 
   const InsightNavigate = useCallback(() => {
     navigate("/insights");
@@ -14,21 +32,24 @@ const JackOfAllTrades = () => {
   return (
     <>
       {/* INTRO */}
-      <div className="px-44">
-        <div className="px-6 mb-8 border-b-2 border-black">
+      <div className="md:px-44 px-6">
+        <div className="px-6 mb-8">
           <Reveal delay={0.5} y1={-50} y2={0}>
-            <p
-              className="underline cursor-pointer hover:text-gray-500"
-              onClick={InsightNavigate}
-            >
-              Back to Our Insights
-            </p>
-            <h2 className="text-6xl font-bold leading-tight">
-              Improving Africa's digital and innovation ecosystems: five ways
-              forward
-            </h2>
-            <p className="pb-6">Posted October 06, 2022</p>
+            <div className="px-6">
+              <p
+                className="underline cursor-pointer hover:text-gray-500 pb-3"
+                onClick={InsightNavigate}
+              >
+                Back to Our Insights
+              </p>
+              <h2 className="md:text-6xl text-2xl font-bold leading-tight">
+                Improving Africa's digital and innovation ecosystems: five ways
+                forward
+              </h2>
+              <p className="pb-6">Posted October 06, 2022</p>
+            </div>
           </Reveal>
+          <div className="border-b-2 border-black"></div>
         </div>
       </div>
 
@@ -42,9 +63,9 @@ const JackOfAllTrades = () => {
       </div>
 
       {/* BODY */}
-      <article className="px-44 pt-10">
-        <div className="pt-16 pr-20">
-          <p className="mb-8 text-lg leading-8">
+      <article className="md:px-44 px-6 pt-10">
+        <div className="pt-16 md:pr-20 text-base">
+          <p className="mb-8 md:text-lg leading-8">
             Innovation and digital technologies have great potential to create
             jobs, boost productivity growth, reduce poverty, foster inclusion,
             and reduce inequality. They are vital for increasing the production
@@ -55,7 +76,7 @@ const JackOfAllTrades = () => {
             Africa­––yet.
           </p>
 
-          <p className="mb-8 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             On February 23, ACET brought together key stakeholders, including
             entrepreneurs, policymakers, and international actors for a “deep
             dive” discussion on how African governments can improve policymaking
@@ -63,7 +84,7 @@ const JackOfAllTrades = () => {
             support of the continent’s economic transformation.
           </p>
 
-          <p className="mb-8 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             On February 23, ACET brought together key stakeholders, including
             entrepreneurs, policymakers, and international actors for a “deep
             dive” discussion on how African governments can improve policymaking
@@ -71,7 +92,7 @@ const JackOfAllTrades = () => {
             support of the continent’s economic transformation.
           </p>
 
-          <p className="mb-8 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             Freda Yawson, ACET Innovation and Infrastructure Senior Manager, and
             Rob Floyd, ACET Senior Fellow and World Bank Director, also
             participated in the webinar to present details on ACET’s new Digital
@@ -89,7 +110,7 @@ const JackOfAllTrades = () => {
           </h4>
         </div>
         {/* SECTION 1 */}
-        <div className=" text-lg pr-20">
+        <div className="md:text-lg md:pr-20">
           <p className="text-gray-600 font-bold pb-4 leading-8">
             **1.**
             <strong className="text-black">
@@ -225,7 +246,7 @@ const JackOfAllTrades = () => {
               <strong>Watch the recorded event below</strong>
             </em>
           </p>
-          <h4 className="font-bold pt-10 pb-4">
+          <h4 className="font-bold pt-10 pb-3">
             ACET research on innovation and African transformation
           </h4>
           <p className="pb-4 leading-8">
@@ -262,7 +283,11 @@ const JackOfAllTrades = () => {
       </article>
 
       {/* GRID IMAGES */}
-      <InsightPreview fourthCol={"hidden"} colsNo={3} moreInsights={"hidden"} />
+      <InsightPreview
+        fourthCol={"hidden"}
+        colsNo={dimensions.width >= 768 ? 3 : 1}
+        moreInsights={"hidden"}
+      />
     </>
   );
 };

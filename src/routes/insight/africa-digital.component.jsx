@@ -1,11 +1,29 @@
 import { useNavigate } from "react-router-dom";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Reveal from "../../utility/reveal";
 
 import InsightPreview from "../../components/insights-preview/insights.preview.component";
 
 const AfricaDigital = () => {
   const navigate = useNavigate();
+  const [dimensions, setDimensions] = useState(
+    {
+      height: window.innerHeight,
+      width: window.innerWidth,
+    },
+    []
+  );
+
+  useEffect(() => {
+    const handleScreenWidth = () => {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+    };
+
+    window.addEventListener("resize", handleScreenWidth);
+  }, []);
 
   const InsightNavigate = useCallback(() => {
     navigate("/insights");
@@ -14,25 +32,28 @@ const AfricaDigital = () => {
   return (
     <>
       {/* INTRO */}
-      <div className="px-44">
-        <div className="px-6 mb-8 border-b-2 border-black">
+      <div className="md:px-44 px-6">
+        <div className="mb-8">
           <Reveal delay={0.5} y1={-50} y2={0}>
-            <p
-              className="underline cursor-pointer hover:text-gray-500"
-              onClick={InsightNavigate}
-            >
-              Back to Our Insights
-            </p>
-            <h2 className="text-6xl font-bold leading-tight">
-              Tuning into Africa's digital Transformation
-            </h2>
-            <p className="pb-6">Posted September 29, 2022</p>
+            <div className="px-6">
+              <p
+                className="underline cursor-pointer hover:text-gray-500 pb-3"
+                onClick={InsightNavigate}
+              >
+                Back to Our Insights
+              </p>
+              <h2 className="md:text-6xl text-3xl font-bold leading-tight">
+                Tuning into Africa's digital Transformation
+              </h2>
+              <p className="pb-8">Posted September 29, 2022</p>
+            </div>
           </Reveal>
+          <div className="border-b-2 border-black"></div>
         </div>
       </div>
 
       {/* IMAGE */}
-      <div className="">
+      <div>
         <img
           className="w-full h-[80vh] object-cover"
           src="https://digitalesque.xyz/static/17776059feb6f8c551fe240c7874e6da/677ad/art1.webp"
@@ -41,20 +62,20 @@ const AfricaDigital = () => {
       </div>
 
       {/* BODY */}
-      <article className="px-44 leading-[1.1] pt-10">
-        <div className="section-1 px-6 leading-relaxed">
-          <h2 className="text-[2em] font-bold py-6 pr-16">
+      <article className="md:px-44 px-6 leading-[1.1] pt-10">
+        <div className="px-6 leading-relaxed md:pr-20">
+          <h2 className="md:text-[2em] text-2xl font-bold py-6 md:pr-16">
             Why the continent’s digital prospects look bright (and are getting
             brighter)
           </h2>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8 mb:text-lg text-base">
             Africa is the last frontier of large global expansion opportunities
             for western companies. Despite its almost 1.4 billion people, 500
             million+ internet users, and 330 million+ e-commerce consumers1,
             Africa is still not on the radar for many businesses or investors
             outside the continent.
           </p>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8 mb:text-lg text-base">
             Now, companies that missed out on the meteoric growth of India and
             China have one final opportunity to secure a foothold in a large,
             fast-growing marketplace. With countries across Africa rapidly
@@ -62,7 +83,7 @@ const AfricaDigital = () => {
             to seriously consider this market before the first-mover opportunity
             window closes.
           </p>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8 mb:text-lg text-base">
             <span className="underline">
               Accenture was recently commissioned by Google to conduct an
               extensive primary and secondary research into the African tech
@@ -72,22 +93,22 @@ const AfricaDigital = () => {
             than 25 tech start-ups, investors, and other enabling tech ecosystem
             players to understand the conversation around this space.
           </p>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8 mb:text-lg text-base">
             Here’s what we found and why it matters for your business.
           </p>
         </div>
 
-        <div className="section-2 px-6 leading-snug">
-          <h2 className="text-[2em] font-bold py-6 pr-16">
+        <div className="section-2 px-6 leading-snug md:pr-20">
+          <h2 className="md:text-[2em] text-2xl font-bold py-6 md:pr-16">
             On the brink of a tech explosion
           </h2>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8 md:text-lg text-base">
             Across Africa, the internet-based economy is on the rise. In the
             past decade alone, several African nations have achieved sustained
             growth in internet-driven GDP (iGDP)2– in many cases doubling from
             1.5% to more than 3% since 20123.
           </p>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8 mb:text-lg text-base">
             Some countries are on an especially rapid trajectory. For example,
             by 2050, the share of the economy powered by the internet (the iGDP)
             in Kenya, Morocco, Senegal, and South Africa will be approximately
@@ -95,7 +116,7 @@ const AfricaDigital = () => {
             set to reach between 4%-5% iGDP, comparable to Brazil’s present
             level.
           </p>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8  mb:text-lg text-base">
             Some countries are on an especially rapid trajectory. For example,
             by 2050, the share of the economy powered by the internet (the iGDP)
             in Kenya, Morocco, Senegal, and South Africa will be approximately
@@ -103,26 +124,30 @@ const AfricaDigital = () => {
             set to reach between 4%-5% iGDP, comparable to Brazil’s present
             level.
           </p>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8  mb:text-lg text-base">
             Buoyed by these exciting trends, the internet economy could
             contribute up to:
           </p>
-          <p className="mb-8 pr-12 text-lg">$180B</p>
-          <p className="mb-8 pr-12 text-lg">to the African economy by 20254</p>
-          <p className="mb-8 pr-12 text-lg">$712B</p>
-          <p className="mb-8 pr-12 text-lg">to the African economy by 20254</p>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8  mb:text-lg text-base">$180B</p>
+          <p className="mb-8  mb:text-lg text-base">
+            to the African economy by 20254
+          </p>
+          <p className="mb-8  mb:text-lg text-base">$712B</p>
+          <p className="mb-8  mb:text-lg text-base">
+            to the African economy by 20254
+          </p>
+          <p className="mb-8  mb:text-lg text-base">
             With a whole range of lagging and leading indicators pointing
             towards accelerated growth, Africa’s fast-expanding tech ecosystem
             is an outstanding opportunity for tech and non-tech companies to
             make their move into the continent.
           </p>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8  mb:text-lg text-base">
             In fact, it’s no exaggeration to say that Africa offers a comparable
             level of potential to that previously seen in the APAC region.
           </p>
           <blockquote className="italic border-l-4 border-grey-600 pl-6">
-            <p className="mb-8 pr-12 text-lg">
+            <p className="mb-8  text-lg">
               "If Africa sustains and accelerates structural reforms, the
               continent has the potential to emulate China’s rapid economic rise
               over the past 50 years5".
@@ -133,11 +158,11 @@ const AfricaDigital = () => {
           </blockquote>
         </div>
 
-        <div className="section-3 px-6 py-4 leading-snug">
-          <h2 className="text-[2em] font-bold py-6 pr-16">
+        <div className="section-3 px-6 py-4 leading-snug md:pr-20">
+          <h2 className="mb:text-[2em] text-2xl font-bold py-6">
             The Africa tech ecosystem is strong and rapidly getting stronger
           </h2>
-          <p className=" mb-8 pr-12 text-lg">
+          <p className=" mb-8  mb:text-lg text-base">
             Africa is also on pace to be home to the world’s next mass
             generation of consumers and talent. Consumer spending is expected to
             grow by two-thirds between 2015 and 2030 – especially for Africa’s
@@ -146,7 +171,7 @@ const AfricaDigital = () => {
             522 million internet users today are expected to expand by 11% over
             the next decade to comprise 16% of the global total7.
           </p>
-          <p className=" mb-8 pr-12 text-lg">
+          <p className=" mb-8  mb:text-lg text-base">
             In line with its increasingly affluent and internet-enabled consumer
             base, the tech talent pool is also on the rise. Across the
             continent, the number of software developers has increased by 4%
@@ -162,7 +187,7 @@ const AfricaDigital = () => {
             easily spin up a website, payment capabilities, or apps without
             having or hiring advanced technical expertise or resources.
           </p>
-          <p className=" mb-8 pr-12 text-lg">
+          <p className=" mb-8  mb:text-lg text-base">
             This isn’t a far-off-future scenario. It’s happening now. Companies
             across the globe are already tapping into Africa’s abundant supply
             of talent. As the global shift to remote work globalized the talent
@@ -173,11 +198,11 @@ const AfricaDigital = () => {
           </p>
         </div>
 
-        <div className="section-4 px-6 leading-snug">
-          <h2 className="text-[2em] font-bold py-6 pr-16">
+        <div className="section-4 px-6 leading-snug md:pr-20">
+          <h2 className="mb:text-[2em] text-2xl font-bold py-6">
             Local digital transformation surges
           </h2>
-          <p className=" mb-8 pr-12 text-lg">
+          <p className=" mb-8  mb:text-lg text-base">
             There’s a clear link between digital and economic growth, and Africa
             is poised to take advantage. Across the continent, 40% of the
             population (over 500 million people) now have internet access,
@@ -188,12 +213,12 @@ const AfricaDigital = () => {
             on these promising trends. In the last two years, the use of digital
             tools and platforms in business surged.
           </p>
-          <p className=" mb-8 pr-12 text-lg">22%</p>
-          <p className=" mb-8 pr-12 text-lg">
+          <p className=" mb-8  mb:text-lg text-base">22%</p>
+          <p className=" mb-8  mb:text-lg text-base">
             of sub-Saharan businesses said that they’d either started to use or
             increased their use of digital tech during 202015.
           </p>
-          <p className=" mb-8 pr-12 text-lg">
+          <p className=" mb-8  mb:text-lg text-base">
             At the government level, there are also some very encouraging and
             positive signs. We have recently seen the launch of a number of
             promising, pro-innovation initiatives that aim to further accelerate
@@ -209,11 +234,11 @@ const AfricaDigital = () => {
           </p>
         </div>
 
-        <div className="section-5 px-6 leading-snug">
-          <h2 className="text-[2em] font-bold py-6 pr-16">
+        <div className="section-5 px-6 leading-snug md:pr-20">
+          <h2 className="mb:text-[2em] text-2xlmb: font-b text-baseold py-6">
             Startups take flight
           </h2>
-          <p className=" mb-8 pr-12 text-lg">
+          <p className=" mb-8  mb:text-lg text-base">
             Africa is also home to a flourishing startup ecosystem. Since 2020,
             venture capital investment bounced back emphatically, reaching over
             $4.3 billion in 202118. Between 2015 and 2021, investment has grown
@@ -227,20 +252,20 @@ const AfricaDigital = () => {
             .
           </p>
           <blockquote className="italic border-l-4 border-grey-600 pl-6">
-            <p className=" mb-8 pr-12 text-lg">
+            <p className=" mb-8  mb:text-lg text-base">
               "Nigeria has become a beacon of start-up success, especially for
               fintech, capturing 37% of all VC funding in Africa in the first
               eight months of 2021 alone20."
             </p>
           </blockquote>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8  mb:text-lg text-base">
             Nigeria is now established as a vibrant hub for new tech businesses,
             as shown by the 2019 NYSE debut of e-commerce player Jumia,
             surpassing a $1 billion valuation21. This is a promising sign for
             local skill development as 56% of developers we surveyed work for
             startups22, where they gain significant practical experience.
           </p>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8  mb:text-lg text-base">
             So, what’s attracting this surge in startups and VC interest? Over
             the past two years, the relative risk of African investments has
             decreased as investors began to assess mature and emerging markets
@@ -256,14 +281,16 @@ const AfricaDigital = () => {
           </p>
         </div>
 
-        <div className="section-6 px-6 leading-snug">
-          <h2 className="text-[2em] font-bold py-6 pr-16">Getting going</h2>
-          <p className="mb-8 pr-12 text-lg">
+        <div className="section-6 px-6 leading-snug md:pr-20">
+          <h2 className="mb:text-[2em] text-2xl font-bold py-6">
+            Getting going
+          </h2>
+          <p className="mb-8  mb:text-lg text-base">
             As we’ve shown, many signposts are pointing the way to a bright
             digital future for Africa. Companies everywhere need to pay
             attention. So how should they move forward?
           </p>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8  mb:text-lg text-base">
             The good news is that global companies provide an example to
             fast-follow. The likes of Amazon, Google, Microsoft and Orange have
             invested heavily in digital infrastructure and upskilling in the
@@ -272,7 +299,7 @@ const AfricaDigital = () => {
             governments and businesses as a way to better navigate the
             regulatory environment and local population needs and wants.
           </p>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8  mb:text-lg text-base">
             Making sure that products and services meet local requirements is
             essential. Just think back to when mobile payments player M-Pesa
             launched in Kenya in 2007, giving Africa mobile banking before
@@ -282,7 +309,7 @@ const AfricaDigital = () => {
             leapfrogging the need for traditional telecoms and banking
             infrastructures.
           </p>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8  mb:text-lg text-base">
             We could well see a similarly disruptive opportunity through
             low-code solutions to democratize digital innovation in Africa. Not
             only could these accelerate the continent’s digital transformation,
@@ -292,7 +319,7 @@ const AfricaDigital = () => {
             turn, help local tech companies punch above their weight on local
             and global stages.
           </p>
-          <p className="mb-8 pr-12 text-lg">
+          <p className="mb-8  mb:text-lg text-base">
             It’s hard to exaggerate the scale of the opportunity. The time to
             plan your African success story is now. Regardless of industry,
             Africa must be a key component of any global expansion roadmap.
@@ -303,10 +330,10 @@ const AfricaDigital = () => {
         </div>
       </article>
 
-      <div className="sources px-44 leading-relaxed">
+      <div className="sources mb:px-44 px-6 leading-relaxed md:pr-20">
         <div className="px-4 py-6">
-          <h2 className="text-[2em] font-bold py-6 pr-16">Sources</h2>
-          <ol className="list-decimal flex flex-col gap-y-5 pr-12 pl-6 text-lg">
+          <h2 className="mb:text-[2em] text-2xl font-bold py-6">Sources</h2>
+          <ol className="list-decimal flex flex-col gap-y-5  pl-6 mb:text-lg text-base">
             <li className="pl-4 text-gray-600">
               <p className="text-black">Statista</p>
             </li>
@@ -529,7 +556,7 @@ const AfricaDigital = () => {
         <InsightPreview
           firstCol={"hidden"}
           moreInsights={"hidden"}
-          colsNo={3}
+          colsNo={dimensions.width >= 768 ? 3 : 1}
         />
       </div>
     </>

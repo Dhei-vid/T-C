@@ -1,11 +1,29 @@
 import { useNavigate } from "react-router-dom";
-import { useCallback } from "react";
+import { useCallback, useState, useEffect } from "react";
 
 import Reveal from "../../utility/reveal";
 import InsightPreview from "../../components/insights-preview/insights.preview.component";
 
 const PromisesPeril = () => {
   const navigate = useNavigate();
+  const [dimensions, setDimensions] = useState(
+    {
+      height: window.innerHeight,
+      width: window.innerWidth,
+    },
+    []
+  );
+
+  useEffect(() => {
+    const handleScreenWidth = () => {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+    };
+
+    window.addEventListener("resize", handleScreenWidth);
+  }, []);
 
   const InsightNavigate = useCallback(() => {
     navigate("/insights");
@@ -14,16 +32,16 @@ const PromisesPeril = () => {
   return (
     <>
       {/* INTRO */}
-      <div className="px-44">
+      <div className="md:px-44 px-6">
         <div className="px-6 mb-8 border-b-2 border-black">
           <Reveal delay={0.5} y1={-50} y2={0}>
             <p
-              className="underline cursor-pointer hover:text-gray-500"
+              className="underline cursor-pointer hover:text-gray-500 pb-3"
               onClick={InsightNavigate}
             >
               Back to Our Insights
             </p>
-            <h2 className="text-6xl font-bold leading-tight">
+            <h2 className="md:text-6xl text-3xl font-bold leading-tight">
               The Promises and perils of Africa's digital revolution
             </h2>
             <p className="pb-6">Posted October 04, 2022</p>
@@ -41,10 +59,10 @@ const PromisesPeril = () => {
       </div>
 
       {/* BODY */}
-      <article className="px-44 pt-10">
+      <article className="md:px-44 px-6 pt-10 md:pr-[30%]">
         {/* DESCRIPTION TEXT */}
         <div className="pt-16">
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             Across the African continent, the relentless spread of networks,
             sensors, artificial intelligence, and automation is driving a
             revolution to an unknown destination. Emerging technologies such as
@@ -59,7 +77,7 @@ const PromisesPeril = () => {
             autonomous weapons arms race.
           </p>
 
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             Emerging technology is having a powerful impact on the security and
             stability of African states. Yet the digital revolution’s ultimate
             legacy will be determined not by technology, but by how it is used.
@@ -75,10 +93,10 @@ const PromisesPeril = () => {
 
         {/* SECTION 1 */}
         <div>
-          <h2 className="text-[2em] font-bold py-6 pr-16">
+          <h2 className="md:text-[2em] text-2xl font-bold py-6">
             Internet Penetration
           </h2>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             The rapid spread of the internet across the African continent has
             been heralded as a key driver of prosperity and a sign of the
             continent’s technological coming of age. Today, at least a
@@ -96,7 +114,7 @@ const PromisesPeril = () => {
             already generated 1.7 million jobs and contribute $144 billion to
             the continent’s economy, or roughly 8.5% of GDP.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             Some African countries have taken advantage of rapid increases in
             internet penetration to make concrete improvements in the lives of
             citizens. Led by the rise of platforms such as Kenya’s M-PESA,
@@ -119,7 +137,7 @@ const PromisesPeril = () => {
             improve government transparency in countries where official graft is
             a universal concern.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             Nevertheless, the rapid spread of the internet across Africa has
             downsides. For one, without
             <a href="https://unctad.org/system/files/official-document/der2019_en.pdf">
@@ -142,7 +160,7 @@ const PromisesPeril = () => {
             already-substantial inequality, and inflaming regional, political,
             and ethnic divides.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             More broadly, digitization brings with it
             <a href="https://africacenter.org/spotlight/africa-evolving-cyber-threats/">
               vulnerabilities
@@ -165,10 +183,10 @@ const PromisesPeril = () => {
 
         {/* SECTION 2*/}
         <div>
-          <h2 className="text-[2em] font-bold py-6 pr-16">
+          <h2 className="md:text-[2em] text-2xl font-bold py-6">
             Technological innovation and diffusion
           </h2>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             Just as influential as expanding internet penetration will be the
             development and diffusion of emerging technology. Because most
             African countries are low income and tend not to rank among the
@@ -181,7 +199,7 @@ const PromisesPeril = () => {
             emerging technologies, artificial intelligence (AI) and drones, in
             ways that are at once innovative and disruptive.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             According to the Carnegie Endowment for International Peace, 15
             African countries use AI-enabled surveillance technologies,
             <a href="https://carnegieendowment.org/2019/09/17/global-expansion-of-ai-surveillance-pub-79847">
@@ -190,12 +208,12 @@ const PromisesPeril = () => {
             algorithmic analysis and CCTV camera-assisted facial recognition to
             monitor and respond to crime. During a 2019 assault by the insurgent
             group Al-Shabaab on an upscale hotel in Nairobi, Kenya, these
-            technologies{" "}
+            technologies
             <a href="https://africatimes.com/2019/12/18/huaweis-surveillance-tech-in-kenya-a-safe-bet/">
               helped
             </a>
             authorities respond quickly and decisively. Yet surveillance
-            technology’s{" "}
+            technology’s
             <a href="https://africacenter.org/spotlight/surveillance-technology-in-africa-security-concerns/">
               overall efficacy
             </a>
@@ -208,7 +226,7 @@ const PromisesPeril = () => {
             </a>
             to even higher levels. &nbsp;
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             The spread of drones and other autonomous systems highlight similar
             opportunities and risks. In 2016, Rwanda became the world’s first
             country to
@@ -221,7 +239,7 @@ const PromisesPeril = () => {
             </a>
             the use of a drone in combat against a terrorist group.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             This is only the beginning. Drones are{" "}
             <a href="https://africacenter.org/spotlight/africa-evolving-cyber-threats/">
               being incorporated
@@ -247,7 +265,7 @@ const PromisesPeril = () => {
             to build drone swarms “designed for technology transfer and portable
             manufacturing with partner countries.”
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             The ultimate impact of emerging technologies will depend largely on
             how governments choose to use them. Due to their low costs and rapid
             proliferation, AI and drones offer many African countries the
@@ -263,10 +281,10 @@ const PromisesPeril = () => {
 
         {/* SECTION 3*/}
         <div>
-          <h2 className="text-[2em] font-bold py-6 pr-16">
+          <h2 className="md:text-[2em] text-2xl font-bold py-6">
             COVID-19 and its aftermath
           </h2>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8  md:text-lg leading-8">
             The effect of the COVID-19 pandemic is likely to act as an
             accelerant for the spread of emerging technology. The pandemic has
             already led to remarkable innovation. According to a
@@ -296,7 +314,7 @@ const PromisesPeril = () => {
             buy cigarettes, the robot relents: “OK buy your tobacco, but be
             quick and go home.”&nbsp;
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             But as life has moved increasingly online, opportunities for
             malicious actors to exploit digital technology have grown.{" "}
             <a href="https://www.scidev.net/sub-saharan-africa/icts/news/cyberattack-surge-highlights-africa-security-risk.html">
@@ -310,7 +328,7 @@ const PromisesPeril = () => {
             pandemic response or use COVID as a lure to get unwitting
             individuals to download malicious software.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             Moreover, Africa’s economies
             <a href="https://www.economist.com/middle-east-and-africa/2021/02/06/africas-recovery-from-covid-19-will-be-slow">
               are expected
@@ -330,7 +348,7 @@ const PromisesPeril = () => {
             </a>
             of the group.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             The economic, political and technological shocks of COVID-19 could
             also accelerate unsettling trends of digital repression and
             conflict. Prior to the pandemic, conflict in Africa was already on
@@ -354,8 +372,10 @@ const PromisesPeril = () => {
 
         {/* SECTION 4*/}
         <div>
-          <h2 className="text-[2em] font-bold py-6 pr-16">A protean legacy</h2>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <h2 className="md:text-[2em] text-2xl font-bold py-6">
+            A protean legacy
+          </h2>
+          <p className="mb-8 md:text-lg leading-8">
             Most likely, African governments will continue to exhibit tremendous
             variation in their ability to adapt to this period of geopolitical
             uncertainty and technological change. Some of the more innovative
@@ -369,7 +389,7 @@ const PromisesPeril = () => {
             Telecommunication’s Unions global cybersecurity commitment index.
             &nbsp;
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 text-lg leading-8">
             More countries, however, risk being destabilized or limited in their
             ability to harvest the fruits of the digital revolution. Nigeria has
             <a href="https://www.forbes.com/sites/tobyshapshak/2019/10/30/africa-now-has-643-tech-hubs-which-play-pivotal-role-for-business/?sh=29f730364e15">
@@ -389,7 +409,7 @@ const PromisesPeril = () => {
             a basic prerequisite for technology-driven growth and innovation,
             yet in fifteen countries, penetration rates are ten percent or less.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             For Africa’s digital revolution to yield peace and prosperity, it is
             not enough for African countries to focus on the rapid, and often
             reactive, adoption of emerging technology. It is equally crucial to
@@ -403,7 +423,7 @@ const PromisesPeril = () => {
             do to respond to the proliferation of emerging technology is no
             longer a theoretical one. It is urgent. &nbsp;
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             The signs of Africa’s digital revolution are impossible to miss. The
             destination? Impossible to know.
           </p>
@@ -411,7 +431,11 @@ const PromisesPeril = () => {
       </article>
 
       {/* GRID IMAGES */}
-      <InsightPreview thirdCol={"hidden"} colsNo={3} moreInsights={"hidden"} />
+      <InsightPreview
+        thirdCol={"hidden"}
+        colsNo={dimensions.width >= 768 ? 3 : 1}
+        moreInsights={"hidden"}
+      />
     </>
   );
 };

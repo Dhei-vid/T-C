@@ -1,11 +1,29 @@
 import { useNavigate } from "react-router-dom";
-import { useCallback } from "react";
+import { useCallback, useState, useEffect } from "react";
 
 import Reveal from "../../utility/reveal";
 import InsightPreview from "../../components/insights-preview/insights.preview.component";
 
 const LessonsFromIndia = () => {
   const navigate = useNavigate();
+  const [dimensions, setDimensions] = useState(
+    {
+      height: window.innerHeight,
+      width: window.innerWidth,
+    },
+    []
+  );
+
+  useEffect(() => {
+    const handleScreenWidth = () => {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+    };
+
+    window.addEventListener("resize", handleScreenWidth);
+  }, []);
 
   const InsightNavigate = useCallback(() => {
     navigate("/insights");
@@ -14,21 +32,24 @@ const LessonsFromIndia = () => {
   return (
     <>
       {/* INTRO */}
-      <div className="px-44">
-        <div className="px-6 mb-8 border-b-2 border-black">
+      <div className="md:px-44 px-6">
+        <div className="px-6 mb-8">
           <Reveal delay={0.5} y1={-50} y2={0}>
-            <p
-              className="underline cursor-pointer hover:text-gray-500"
-              onClick={InsightNavigate}
-            >
-              Back to Our Insights
-            </p>
-            <h2 className="text-6xl font-bold leading-tight">
-              Digital Transformation in Africa: three lessons from India's
-              experience
-            </h2>
-            <p className="pb-6">Posted October 02, 2022</p>
+            <div className="px-6">
+              <p
+                className="underline cursor-pointer hover:text-gray-500 pb-3"
+                onClick={InsightNavigate}
+              >
+                Back to Our Insights
+              </p>
+              <h2 className="md:text-6xl text-3xl font-bold leading-tight">
+                Digital Transformation in Africa: three lessons from India's
+                experience
+              </h2>
+              <p className="pb-6">Posted October 02, 2022</p>
+            </div>
           </Reveal>
+          <div className="border-b-2 border-black"></div>
         </div>
       </div>
 
@@ -42,10 +63,10 @@ const LessonsFromIndia = () => {
       </div>
 
       {/* BODY */}
-      <article className="px-44 leading-[1.1] pt-10">
+      <article className="md:px-44 px-6 leading-[1.1] pt-10">
         {/* DESCRIPTION TEXT */}
         <div className="pt-16">
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:pr-12 md:text-lg leading-8">
             Delegates from Brazil, Russia, India, China and South Africa are in
             Johannesburg this week for the
             <a href="https://blogs.die-gdi.de/2018/07/04/brics-and-africa/">
@@ -57,7 +78,7 @@ const LessonsFromIndia = () => {
             digital transformation in Africa.
           </p>
 
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:pr-12 md:text-lg leading-8">
             Among the BRICS economies, India
             <a href="http://www.itu.int/net4/ITU-D/idi/2017/index.html">
               ranks lowest
@@ -69,7 +90,7 @@ const LessonsFromIndia = () => {
             digital divide; a skills-mismatch.
           </p>
 
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:pr-12 md:text-lg leading-8">
             However, India has successfully launched many unique digital
             initiatives in the last few years. So what lessons can African
             countries learn from India’s experience?
@@ -77,18 +98,18 @@ const LessonsFromIndia = () => {
         </div>
 
         {/* SECTION 1 */}
-        <div>
-          <h2 className="text-[2em] font-bold py-6 pr-16">
+        <div className="md:pr-20">
+          <h2 className="md:text-[2em] text-2xl font-bold py-6">
             1. Develop a national digital identification system
           </h2>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             Having a digital identity is the very basis of functioning in a
             digital economy. It is a key enabler of access to government
             benefits, cross-border authentication, digital payments and
             e-commerce growth.
           </p>
 
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 pr-12 md:text-lg leading-8">
             India has the world’s largest digital identification programme –
             ‘Aadhar’, literally meaning ‘foundation’. Launched less than a
             decade ago, it already has over a billion Indian residents enrolled
@@ -99,7 +120,7 @@ const LessonsFromIndia = () => {
             number and physical address. &nbsp;
           </p>
 
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 pr-12 md:text-lg leading-8">
             The best comparable example within Africa is the Ghana Card, aiming
             to rapidly deliver public services to Ghanaian citizens. It’s still
             in its pilot phase, with over 500 people receiving their Ghana Card
@@ -110,7 +131,7 @@ const LessonsFromIndia = () => {
             Aadhar’s use of cloud technology for data management. &nbsp;
           </p>
 
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 pr-12 md:text-lg leading-8">
             The Aadhar card has however suffered from its own issues around data
             privacy, information leaks and data storage. To avoid similar
             pitfalls, African governments should address data security issues
@@ -124,8 +145,8 @@ const LessonsFromIndia = () => {
         </div>
 
         {/* SECTION 2 */}
-        <div>
-          <h2 className="text-[2em] font-bold py-6 pr-16">
+        <div className="md:pr-20">
+          <h2 className="md:text-[2em] text-2xl font-bold py-6">
             2. Invest in building – and sharing – digital infrastructure
           </h2>
           <p className="mb-8 pr-12 text-lg leading-8">
@@ -136,11 +157,11 @@ const LessonsFromIndia = () => {
             gram panchayats (village councils) in rural India by laying optical
             fibres across the country.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8  md:text-lg leading-8">
             But this isn’t the only way to improve internet penetration and
             bridge the digital divide.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             Recently, the government also granted a Unified License for Mobile
             Virtual Network Operators (MVNOs). Unlike mobile network operators
             (MNOs), MVNOs do not have their own infrastructure; instead they
@@ -148,12 +169,12 @@ const LessonsFromIndia = () => {
             excess network capacity. Each MVNO then sells services, such as data
             for internet, at its own price.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             As firms compete for market share, the cost of internet can fall,
             which would be particularly useful in African countries where the
             telecom market is more monopolistic.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8  md:text-lg leading-8">
             Kenya&nbsp;has already granted
             <a href="https://www.mobileworldlive.com/money/news-money/kenya-shakes-mobile-money-licensing-three-mvnos/">
               MVNO licenses to three companies
@@ -170,11 +191,11 @@ const LessonsFromIndia = () => {
         </div>
 
         {/* SECTION 3 */}
-        <div>
-          <h2 className="text-[2em] font-bold py-6 pr-16">
+        <div className="md:pr-20">
+          <h2 className="md:text-[2em] text-2xl font-bold py-6">
             3. Take a targeted approach towards skills development
           </h2>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             The
             <a href="https://set.odi.org/digitalisation-manufacturing/">
               evidence
@@ -186,7 +207,7 @@ const LessonsFromIndia = () => {
             to skills development, where policies encourage innovation and
             entrepreneurship to meet local demand.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             In 2015, India set up the National Skill Development Policy to
             provide an overall framework for all skills-related activities
             within the country, to link them with skill-demand centres and to
@@ -196,7 +217,7 @@ const LessonsFromIndia = () => {
             Similar policies will be useful in Africa where there is a very low
             demand for TVET.&nbsp;
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8 md:text-lg leading-8">
             India has also set up schemes providing easy access to information
             on the demand and supply of skills in a particular sector or
             location; promoting industry-academia collaboration; and boosting
@@ -210,7 +231,7 @@ const LessonsFromIndia = () => {
             learning. Short term training will also be provided for people who
             are unemployed or have dropped out of school or college.
           </p>
-          <p className="mb-8 pr-12 text-lg leading-8">
+          <p className="mb-8  md:text-lg leading-8">
             These kinds of schemes are particularly useful in Africa, where the
             <a href="https://www.weforum.org/press/2017/05/close-skills-gaps-to-prepare-africa-s-workforce-for-tomorrow-s-jobs/">
               skills gap
@@ -226,7 +247,11 @@ const LessonsFromIndia = () => {
       </article>
 
       {/* GRID IMAGES */}
-      <InsightPreview secondCol={"hidden"} moreInsights={"hidden"} colsNo={3} />
+      <InsightPreview
+        secondCol={"hidden"}
+        moreInsights={"hidden"}
+        colsNo={dimensions.width >= 768 ? 3 : 1}
+      />
     </>
   );
 };
