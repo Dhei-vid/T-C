@@ -5,9 +5,9 @@ import Reveal from "../../utility/reveal";
 const Capabilities = () => {
   return (
     <>
-      <div className="px-44">
+      <div className="md:px-44 px-6">
         <Reveal delay={0.5} y1={-50} y2={0}>
-          <h1 className="text-7xl font-bold leading-none tracking-wider">
+          <h1 className="md:text-7xl text-3xl font-bold leading-none tracking-wider">
             Our Capabilities
           </h1>
         </Reveal>
@@ -16,9 +16,9 @@ const Capabilities = () => {
       {/* CAROUSEL */}
       <Carousel />
 
-      <div className="px-36">
+      <div className="md:px-36 px-6">
         <div className="grid px-8 border-b-2 border-black py-16">
-          <p className="text-3xl leading-tight tracking-wide font-bold ">
+          <p className="md:text-3xl text-2xl leading-tight tracking-wide font-bold ">
             Maximizing the potential of technology within your company requires
             a mindset shift. Our strategic consulting is backed by real-world
             results. We don't just talk about transformation; we make it real.
@@ -26,7 +26,7 @@ const Capabilities = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 pt-10">
+      <div className="grid md:grid-cols-2 pt-10">
         <CapabilitiesGridImages />
 
         <div className="w-full min-h-[65vh] bg-[url('https://digitalesque.xyz/static/ae893a2dff3e538a678b494e9561958f/0de74/pe.webp')] bg-cover bg-center">
