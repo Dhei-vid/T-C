@@ -52,7 +52,7 @@ const Slides = () => {
           >
             <img
               src="https://digitalesque.xyz/static/dc69b4dd03b578f3e267015ef3f98204/9392e/PURPOSE.jpg"
-              className="block w-full h-[80vh] mx-w-full contain"
+              className="block w-full h-[80vh] mx-w-full"
               alt="Motorbike Smoke"
             />
             <div className="absolute inset-x-[5%] bottom-10 pb-10 md:pr-36 font-semibold leading-tight md:text-3xl text-[1.4rem] text-white md:block">
