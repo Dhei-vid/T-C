@@ -7,7 +7,7 @@ const Slides = () => {
   });
 
   return (
-    <div className="pt-10 px-36">
+    <div className="pt-10 md:px-36 px-6">
       <div
         id="carouselDarkVariant"
         className="relative"
@@ -55,7 +55,7 @@ const Slides = () => {
               className="block w-full h-[80vh] mx-w-full contain"
               alt="Motorbike Smoke"
             />
-            <div className="absolute inset-x-[5%] bottom-10 hidden pb-12 pr-36 leading-tight font-semibold text-3xl text-white md:block">
+            <div className="absolute inset-x-[5%] bottom-10 pb-10 md:pr-36 font-semibold leading-tight md:text-3xl text-[1.4rem] text-white md:block">
               <p>
                 Our PURPOSE is to improve African lives through the digital
                 transformation of Africa one project at a time.
@@ -74,7 +74,7 @@ const Slides = () => {
               className="block w-full h-[80vh]"
               alt="Mountaintop"
             />
-            <div className="absolute inset-x-[5%] bottom-10 hidden pb-12 pr-36 leading-tight font-semibold text-3xl text-white md:block">
+            <div className="absolute inset-x-[5%] bottom-10 pb-10 md:pr-36 font-semibold leading-tight md:text-3xl text-[1.4rem] text-white md:block">
               <p>
                 Our VISION is to be the premier human-centric digital
                 transformation agency in Africa.
@@ -93,7 +93,7 @@ const Slides = () => {
               className="block w-full h-[80vh]"
               alt="Woman Reading a Book"
             />
-            <div className="absolute inset-x-[5%] bottom-10 hidden pb-12 pr-36 font-semibold leading-tight text-3xl text-white md:block">
+            <div className="absolute inset-x-[5%] bottom-10 pb-10 md:pr-36 font-semibold leading-tight md:text-3xl text-[1.4rem] text-white md:block">
               <p>
                 Our MISSION is to offer bespoke, trusted advanced digital
                 solutions to the challenges of individuals, businesses, and
@@ -108,64 +108,3 @@ const Slides = () => {
 };
 
 export default Slides;
-
-{
-  {
-    /* <!-- Carousel controls - prev item--> */
-  }
-  /* <button
-className="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-type="button"
-data-te-target="#carouselDarkVariant"
-data-te-slide="prev"
->
-<span className="inline-block h-8 w-8 dark:grayscale">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth="1.5"
-    stroke="currentColor"
-    className="h-6 w-6"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M15.75 19.5L8.25 12l7.5-7.5"
-    />
-  </svg>
-</span>
-<span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-  Previous
-</span>
-</button>
-{/* <!-- Carousel controls - next item--> */
-}
-{
-  /* <button
-className="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-black opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-black hover:no-underline hover:opacity-90 hover:outline-none focus:text-black focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-type="button"
-data-te-target="#carouselDarkVariant"
-data-te-slide="next"
->
-<span className="inline-block h-8 w-8 dark:grayscale">
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    strokeWidth="1.5"
-    stroke="currentColor"
-    className="h-6 w-6"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M8.25 4.5l7.5 7.5-7.5 7.5"
-    />
-  </svg>
-</span>
-<span className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">
-  Next
-</span>
-</button>  */
-}
