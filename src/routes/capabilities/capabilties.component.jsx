@@ -29,8 +29,8 @@ const Capabilities = () => {
       <div className="grid md:grid-cols-2 pt-10">
         <CapabilitiesGridImages />
 
-        <div className="w-full min-h-[65vh] bg-[url('https://digitalesque.xyz/static/ae893a2dff3e538a678b494e9561958f/0de74/pe.webp')] bg-cover bg-center">
-          <div className="justify-center items-center p-10 pt-[65vh] bg-gradient-to-t from-black">
+        <div className="w-full md:min-h-[80vh] min-h-[65vh] bg-[url('https://digitalesque.xyz/static/ae893a2dff3e538a678b494e9561958f/0de74/pe.webp')] bg-cover bg-center">
+          <div className="justify-center items-center p-10 pt-[100%] bg-gradient-to-t from-black">
             <button className="flex w-full justify-between items-center text-2xl font-extrabold text-white">
               <p>Data Science Consulting</p>
               <svg
