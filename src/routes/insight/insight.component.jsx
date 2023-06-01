@@ -4,13 +4,10 @@ import InsightPreview from "../../components/insights-preview/insights.preview.c
 import Reveal from "../../utility/reveal";
 
 const Insight = () => {
-  const [dimensions, setDimensions] = useState(
-    {
-      height: window.innerHeight,
-      width: window.innerWidth,
-    },
-    []
-  );
+  const [dimensions, setDimensions] = useState({
+    height: window.innerHeight,
+    width: window.innerWidth,
+  });
 
   useEffect(() => {
     const handleScreenWidth = () => {
@@ -44,7 +41,7 @@ const Insight = () => {
 
       {/* INSIGHT PREVIEW */}
       <InsightPreview
-        colsNo={dimensions.width >= 768 ? 4 : 1}
+        colsNo={dimensions.width >= 700 ? 4 : 1}
         moreInsights={"hidden"}
       />
     </>
