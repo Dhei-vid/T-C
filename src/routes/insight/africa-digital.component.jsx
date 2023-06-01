@@ -14,6 +14,11 @@ const AfricaDigital = () => {
     []
   );
 
+  const stringDimension = dimensions.width.toString();
+
+  console.log(typeof dimensions.width);
+  console.log(typeof stringDimension);
+
   useEffect(() => {
     const handleScreenWidth = () => {
       setDimensions({
@@ -22,7 +27,8 @@ const AfricaDigital = () => {
       });
     };
 
-    window.addEventListener("resize", handleScreenWidth);
+    handleScreenWidth();
+    // window.addEventListener("resize", handleScreenWidth);
   }, []);
 
   const InsightNavigate = useCallback(() => {
@@ -330,10 +336,10 @@ const AfricaDigital = () => {
         </div>
       </article>
 
-      <div className="sources mb:px-44 px-6 leading-relaxed md:pr-20">
+      <div className="sources md:px-44 px-6 leading-relaxed md:pr-20">
         <div className="px-4 py-6">
-          <h2 className="mb:text-[2em] text-2xl font-bold py-6">Sources</h2>
-          <ol className="list-decimal flex flex-col gap-y-5  pl-6 mb:text-lg text-base">
+          <h2 className="md:text-[2em] text-2xl font-bold py-6">Sources</h2>
+          <ol className="list-decimal flex flex-col gap-y-5  pl-6 md:text-lg text-base">
             <li className="pl-4 text-gray-600">
               <p className="text-black">Statista</p>
             </li>
@@ -556,7 +562,7 @@ const AfricaDigital = () => {
         <InsightPreview
           firstCol={"hidden"}
           moreInsights={"hidden"}
-          colsNo={dimensions.width >= 768 ? 3 : 1}
+          colsNo={dimensions.width > 768 ? 3 : 1}
         />
       </div>
     </>
