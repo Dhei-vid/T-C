@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import Reveal from "../../utility/reveal";
 import OverviewPreview from "../../components/overview-preview/overview.preview.component";
@@ -29,6 +29,24 @@ export const clientHomeData = [
 
 const Home = () => {
   const navigate = useNavigate();
+  const [dimensions, setDimensions] = useState(
+    {
+      height: window.innerHeight,
+      width: window.innerWidth,
+    },
+    []
+  );
+
+  useEffect(() => {
+    const handleScreenWidth = () => {
+      setDimensions({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      });
+    };
+
+    window.addEventListener("resize", handleScreenWidth);
+  }, []);
 
   const clientNavigate = useCallback(() => {
     navigate("/clients");
@@ -37,10 +55,10 @@ const Home = () => {
   return (
     <div>
       {/* OVERVIEW */}
-      <section className="px-44">
+      <section className="md:px-44 px-6 mx-auto">
         <Reveal delay={0.5} y1={-50} y2={0}>
           <div>
-            <h1 className="text-7xl font-bold leading-none tracking-wider">
+            <h1 className="md:text-7xl text-[2.5rem] font-bold leading-none tracking-wider">
               The Digital <br />
               <span className="pb-6">Transformation Agency</span>
             </h1>
@@ -61,8 +79,8 @@ const Home = () => {
       {/* CLIENTS */}
       <section>
         <ClientsPreview />
-        <div className="px-44">
-          <div className="grid grid-cols-2 gap-x-24 border-t-2 border-black pt-8">
+        <div className="md:px-44 px-6">
+          <div className="grid md:grid-cols-2 md:gap-x-24 border-t-2 border-black pt-8">
             <ClientGrid data={clientHomeData} />
             <div className="col-end-3 py-6 px-5 justify-self-end">
               <p
@@ -78,12 +96,12 @@ const Home = () => {
 
       {/* INSIGHTS */}
       <section>
-        <div className="col-span-4 px-6 pt-24 pl-44">
+        <div className="md:col-span-4 px-6 pt-24 md:pl-44">
           <Reveal delay={0.4} y1={-20} y2={0}>
             <h3 className="text-3xl font-bold tracking-wider">Our Insights</h3>
           </Reveal>
         </div>
-        <InsightPreview colsNo={4} />
+        <InsightPreview colsNo={dimensions.width >= 700 ? 4 : 1} />
       </section>
     </div>
   );
