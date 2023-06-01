@@ -6,7 +6,9 @@ const CapabiltiesPreview = () => {
     <div className="grid md:grid-cols-3 grid-cols-1">
       <div className="md:col-span-3 py-10 md:pl-44 py-9 md:pt-32">
         <Reveal delay={0.4} y1={-20} y2={0}>
-          <h3 className="md:text-3xl tracking-wider">Our Capabilities</h3>
+          <h3 className="md:text-3xl tracking-wider font-bold">
+            Our Capabilities
+          </h3>
         </Reveal>
       </div>
 
