@@ -12,15 +12,17 @@ const Footer = () => {
   return (
     <>
       <Outlet />
-      <div className="bg-[#148F7C] md:h-[80vh] h-full px-6">
+      <div className="bg-[#148F7C] md:h-[80vh] h-full px-4">
         <div className="md:px-44 grid md:grid-cols-4 gap-4 md:gap-y-32 pb-16 pt-12 text-white font-bold">
           <div className="pb-8">
             <div className="border-t-2 border-white pt-8"></div>
             <Reveal delay={0.3} y1={-25} y2={0}>
-              <p className="font-bold leading-none tracking-wider">
-                The Digital <br />
-                <span className="pb-8">Transformation Agency</span>
-              </p>
+              <a href="#">
+                <p className="font-bold leading-none tracking-wider">
+                  The Digital <br />
+                  <span className="pb-8">Transformation Agency</span>
+                </p>
+              </a>
             </Reveal>
           </div>
           <div className="flex flex-col border-t-2 border-white pt-8 md:col-start-3 py-8">
