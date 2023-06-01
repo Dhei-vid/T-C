@@ -32,7 +32,7 @@ const Navigation = () => {
             }}
             className="absolute bg-[#148F7C] text-white z-40 top-0 w-full h-100%"
           >
-            <div className="md:px-44 px-20 py-10 font-bold">
+            <div className="md:px-44 px-6 py-10 font-bold">
               <header className="flex md:flex-row flex-col-reverse md:gap-8 gap-12 items-center z-30 justify-between border-b-2 border-white pb-8">
                 <h2 className="md:text-4xl text-2xl">
                   The Digitalesque Website Menu
@@ -63,55 +63,55 @@ const Navigation = () => {
               </header>
               <div className="grid md:grid-cols-2">
                 <ul className="col-end-3">
-                  <li className="border-b-2 border-white py-8 pt-8 pl-8 text-base">
+                  <li className="border-b-2 border-white py-8 pt-8 pl-8 text-base transition-all">
                     <a
-                      className="md:text-3xl text-2xl hover:underline cursor-pointer"
+                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-50"
                       href="about"
                     >
                       The Company
                     </a>
                     <p>Everything you need to know about our brand core.</p>
                   </li>
-                  <li className="border-b-2 border-white py-8 pl-8">
+                  <li className="border-b-2 border-white py-8 pl-8 transition-all">
                     <a
-                      className="md:text-3xl text-2xl hover:underline cursor-pointer"
+                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-50"
                       href="blueprint"
                     >
                       The Blueprint
                     </a>
                     <p>Our detailed plan on how we engage in business.</p>
                   </li>
-                  <li className="border-b-2 border-white py-8 pl-8">
+                  <li className="border-b-2 border-white py-8 pl-8 transition-all">
                     <a
-                      className="md:text-3xl text-2xl hover:underline cursor-pointer"
-                      href="/clients"
+                      className="md:text-3xl text-2xl hover:underline duration-300 ease-in-out hover:opacity-50 cursor-pointer"
+                      href="clients"
                     >
                       The Clientele
                     </a>
                     <p>The individuals and organizations we have served.</p>
                   </li>
-                  <li className="border-b-2 border-white py-8 pl-8">
+                  <li className="border-b-2 border-white py-8 pl-8 transition-all">
                     <a
-                      className="md:text-3xl text-2xl hover:underline cursor-pointer"
+                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-50"
                       href="capabilties"
                     >
                       Our Capabilities
                     </a>
                     <p>More details on the kind of workload we carry.</p>
                   </li>
-                  <li className="border-b-2 border-white py-8 pl-8">
+                  <li className="border-b-2 border-white py-8 pl-8 transition-all">
                     <a
-                      className="md:text-3xl text-2xl hover:underline cursor-pointer"
+                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-50"
                       href="insights"
                     >
                       Our Insights
                     </a>
                     <p>Thoughts from us or our friends on the industry.</p>
                   </li>
-                  <li className="border-b-2 border-white py-8 pl-8">
+                  <li className="border-b-2 border-white py-8 pl-8 transition-all">
                     <a
-                      className="md:text-3xl text-2xl hover:underline cursor-pointer"
-                      href="#"
+                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-50"
+                      href="contact"
                     >
                       Our Contacts
                     </a>
@@ -127,7 +127,7 @@ const Navigation = () => {
           <header className="md:px-44 sticky top-0 bg-white py-10 mb-[21rem] z-10">
             <nav className="flex inline-flex px-6 justify-between mb:content-center w-full relative">
               <Reveal delay={0.3} y1={-25} y2={0}>
-                <span onClick={() => redirect()}>
+                <span onClick={() => redirect("/")}>
                   <svg
                     className="w-auto h-[1.75rem] translate-y-[0.25rem] cursor-pointer"
                     viewBox="0 0 151.35 25.68"
