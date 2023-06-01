@@ -2,18 +2,18 @@ import Reveal from "../../utility/reveal";
 
 const Privacy = () => {
   return (
-    <div className="px-44 text-lg">
+    <div className="md:px-44 px-6 md:text-lg text-base">
       <div className="mb-8">
         <Reveal delay={0.5} y1={-50} y2={0}>
-          <h2 className="text-7xl font-bold leading-tight font-heading  pb-8">
+          <h2 className="md:text-7xl text-[3rem] font-bold leading-tight font-heading  pb-8">
             Privacy Policy
           </h2>
           <p className="pb-6">Effective date: 2022-10-15</p>
         </Reveal>
       </div>
 
-      <div className="pt-6 pr-32">
-        <h3 className="text-2xl pb-4 font-bold">1. Introduction</h3>
+      <div className="pt-6 md:pr-32">
+        <h3 className="md:text-2xl text-xl pb-4 font-bold">1. Introduction</h3>
         <p className="pb-4">
           Welcome to <strong>Digitalesque Limited</strong>.
         </p>
@@ -41,8 +41,8 @@ const Privacy = () => {
           agreement with us (<strong>“Agreement”</strong>).
         </p>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">2. Definitions</h3>
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">2. Definitions</h3>
           <p className="pb-4">
             <strong>SERVICE</strong> means the https://digitalesque.xyz/ website
             operated by Digitalesque Limited.
@@ -86,8 +86,8 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
             3. Information Collection and Use
           </h3>
           <p className="pb-4">
@@ -96,8 +96,8 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
             4. Types of Data Collected
           </h3>
           <h4 className="text-xl pb-4 font-bold">Personal Data</h4>
@@ -120,7 +120,7 @@ const Privacy = () => {
             of interest to you. You may opt-out of receiving any, or all, of
             these communications from us by following the unsubscribe link.
           </p>
-          <h4 className="text-xl pb-4 font-bold">Usage Data</h4>
+          <h4 className="md:text-xl text-base pb-4 font-bold">Usage Data</h4>
           <p className="pb-4">
             We may also collect information that your browser sends whenever you
             visit our Service or when you access the Service by or through any
@@ -142,8 +142,10 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pr-32">
-          <h4 className="text-xl pb-4 font-bold">Tracking Cookies Data</h4>
+        <div className="md:pr-32">
+          <h4 className="md:text-xl text-base pb-4 font-bold">
+            Tracking Cookies Data
+          </h4>
           <p className="pb-4">
             We use cookies and similar tracking technologies to track the
             activity on our Service and we hold certain information.
@@ -180,7 +182,7 @@ const Privacy = () => {
           </p>
         </div>
         <div>
-          <h4 className="text-xl pb-4 font-bold">Other Data</h4>
+          <h4 className="md:text-xl text-base pb-4 font-bold">Other Data</h4>
           <p className="pb-4">
             While using our Service, we may also collect the following
             information: sex, age, date of birth, place of birth, passport
@@ -194,8 +196,8 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">5. Use of Data</h3>
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">5. Use of Data</h3>
           <p className="pb-4">
             Digitalesque Limited uses the collected data for various purposes:
           </p>
@@ -243,8 +245,10 @@ const Privacy = () => {
           <p className="pb-4">0.13. for any other purpose with your consent.</p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">6. Retention of Data</h3>
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
+            6. Retention of Data
+          </h3>
           <p className="pb-4">
             We will retain your Personal Data only for as long as is necessary
             for the purposes set out in this Privacy Policy. We will retain and
@@ -262,8 +266,10 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">7. Transfer of Data</h3>
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
+            7. Transfer of Data
+          </h3>
           <p className="pb-4">
             Your information, including Personal Data, may be transferred to –
             and maintained on – computers located outside of your state,
@@ -289,8 +295,10 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">8.Disclosure of Data</h3>
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
+            8.Disclosure of Data
+          </h3>
           <p className="pb-4">
             We may disclose personal information that we collect, or you
             provide:
@@ -338,8 +346,10 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">9. Security of Data</h3>
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
+            9. Security of Data
+          </h3>
           <p>
             The security of your data is important to us but remember that no
             method of transmission over the Internet or method of electronic
@@ -349,8 +359,8 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
             10. Your Data Protection Rights Under General Data Protection
             Regulation (GDPR)
           </h3>
@@ -411,8 +421,8 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
             11. Your Data Protection Rights under the Nigerian Data Protection
             Regulation (NDPR)
           </h3>
@@ -455,8 +465,8 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
             12. Your Data Protection Rights under the Nigerian Consumer Privacy
             Act (CCPA)
           </h3>
@@ -550,8 +560,10 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">13. Service Providers</h3>
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
+            13. Service Providers
+          </h3>
           <p className="pb-4">
             We may employ third-party companies and individuals to facilitate
             our Service (<strong>“Service Providers”</strong>), provide Service
@@ -565,8 +577,8 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
             14. Your Data Protection Rights under the Nigerian Consumer Privacy
             Act (CCPA)
           </h3>
@@ -576,24 +588,28 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">15. CI/CD tools</h3>
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
+            15. CI/CD tools
+          </h3>
           <p className="pb-4">
             We may use third-party Service Providers to monitor and analyse the
             use of our Service.
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">16. CI/CD tools</h3>
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
+            16. CI/CD tools
+          </h3>
           <p className="pb-4">
             We may use third-party Service Providers to automate the development
             process of our Service.
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
             17. Behavioural Remarketing
           </h3>
           <p className="pb-4">
@@ -604,8 +620,10 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">18. Links to Other Sites</h3>
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
+            18. Links to Other Sites
+          </h3>
           <p className="pb-4">
             Our Service may contain links to other sites that are not operated
             by us. If you click a third-party link, you will be directed to that
@@ -619,8 +637,10 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">18. Children’s Privacy</h3>
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
+            18. Children’s Privacy
+          </h3>
           <p className="pb-4">
             Our Services are not intended for use by children under the age of
             18 (<strong>“Child”</strong> or <strong>“Children”</strong>).
@@ -635,8 +655,8 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="pt-6 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">
+        <div className="pt-6 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">
             19. Changes to This Privacy Policy
           </h3>
           <p className="pb-4">
@@ -655,8 +675,8 @@ const Privacy = () => {
           </p>
         </div>
 
-        <div className="py-6 pb-12 pr-32">
-          <h3 className="text-2xl pb-4 font-bold">20. Contact Us</h3>
+        <div className="py-6 pb-12 md:pr-32">
+          <h3 className="md:text-2xl text-xl pb-4 font-bold">20. Contact Us</h3>
           <p className="pb-4">
             If you have any questions about this Privacy Policy, please contact
             us by email:

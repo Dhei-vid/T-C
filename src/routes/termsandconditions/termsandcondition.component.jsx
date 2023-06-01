@@ -2,17 +2,19 @@ import Reveal from "../../utility/reveal";
 
 const TermsAndConditions = () => {
   return (
-    <div className="px-44 leading-normal text-medium">
+    <div className="md:px-44 px-6 leading-normal text-medium">
       <div className="mb-8">
         <Reveal delay={0.5} y1={-50} y2={0}>
-          <h2 className="text-7xl font-bold leading-tight font-heading">
+          <h2 className="md:text-7xl text-[3rem] font-bold leading-tight font-heading">
             Terms & Conditions
           </h2>
         </Reveal>
       </div>
 
-      <div className="text-lg pr-16 ">
-        <h3 className="text-3xl font-bold py-4">Welcome to Digitalesque!</h3>
+      <div className="md:text-lg text-base md:pr-16 ">
+        <h3 className="md:text-3xl text-2xl font-bold py-4">
+          Welcome to Digitalesque!
+        </h3>
         <p className="py-3">
           These terms and conditions outline the rules and regulations for the
           use of Digitalesque Limited's Website, located at&nbsp;
@@ -44,8 +46,8 @@ const TermsAndConditions = () => {
         </p>
       </div>
 
-      <div className="pt-8 pr-16">
-        <h3 className="text-3xl font-bold py-4">Cookies</h3>
+      <div className="pt-8 md:pr-16">
+        <h3 className="md:text-3xl text-2xl font-bold py-4">Cookies</h3>
         <p className="py-3">
           We employ the use of cookies. By accessing Digitalesque, you agreed to
           use cookies in agreement with the Digitalesque Limited's Privacy
@@ -58,8 +60,8 @@ const TermsAndConditions = () => {
         </p>
       </div>
 
-      <div className="pt-8 pr-16 ">
-        <h3 className="text-3xl font-bold py-4">License</h3>
+      <div className="pt-8 md:pr-16 ">
+        <h3 className="md:text-3xl text-2xl font-bold py-4">License</h3>
         <p className="py-3">
           Unless otherwise stated, Digitalesque Limited and/or its licensors own
           the intellectual property rights for all material on Digitalesque. All
@@ -141,8 +143,10 @@ const TermsAndConditions = () => {
         </p>
       </div>
 
-      <div className="pt-8 pr-16 ">
-        <h3 className="text-3xl font-bold py-4">Hyperlinking to our Content</h3>
+      <div className="pt-8 md:pr-16 ">
+        <h3 className="md:text-3xl text-2xl font-bold py-4">
+          Hyperlinking to our Content
+        </h3>
         <p className="py-3">
           The following organizations may link to our Website without prior
           written approval:
@@ -263,8 +267,8 @@ const TermsAndConditions = () => {
         </p>
       </div>
 
-      <div className="pt-8 pr-16 ">
-        <h3 className="text-3xl font-bold py-4">iFrames</h3>
+      <div className="pt-8 md:pr-16">
+        <h3 className="md:text-3xl text-2xl font-bold py-4">iFrames</h3>
         <p className="py-2">
           Without prior approval and written permission, you may not create
           frames around our Webpages that alter in any way the visual
@@ -272,8 +276,10 @@ const TermsAndConditions = () => {
         </p>
       </div>
 
-      <div className="pt-8 pr-16 ">
-        <h3 className="text-3xl font-bold py-4">Content Liability</h3>
+      <div className="pt-8 md:pr-16 ">
+        <h3 className="md:text-3xl text-2xl font-bold py-4">
+          Content Liability
+        </h3>
         <p className="py-2">
           We shall not be hold responsible for any content that appears on your
           Website. You agree to protect and defend us against all claims that is
@@ -284,15 +290,17 @@ const TermsAndConditions = () => {
         </p>
       </div>
 
-      <div className="pt-8 pr-16 ">
+      <div className="pt-8 md:pr-16 ">
         <h3 className="text-3xl font-bold py-4">Your Privacy</h3>
         <a className="underline" href="/privacy">
           Please read Privacy Policy
         </a>
       </div>
 
-      <div className="pt-8 pr-16 ">
-        <h3 className="text-3xl font-bold py-4">Reservation of Rights</h3>
+      <div className="pt-8 md:pr-16 ">
+        <h3 className="md:text-3xl text-2xl font-bold py-4">
+          Reservation of Rights
+        </h3>
         <p className="py-2">
           We reserve the right to request that you remove all links or any
           particular link to our Website. You approve to immediately remove all
@@ -303,8 +311,8 @@ const TermsAndConditions = () => {
         </p>
       </div>
 
-      <div className="pt-8 pr-16 ">
-        <h3 className="text-3xl font-bold py-4">
+      <div className="pt-8 md:pr-16 ">
+        <h3 className="md:text-3xl text-2xl font-bold py-4">
           Removal of links from our website
         </h3>
         <p className="py-2">
@@ -321,8 +329,8 @@ const TermsAndConditions = () => {
         </p>
       </div>
 
-      <div className="pt-8 pr-16 ">
-        <h3 className="text-3xl font-bold py-4">Disclaimer</h3>
+      <div className="pt-8 md:pr-16 ">
+        <h3 className="md:text-3xl text-2xl font-bold py-4">Disclaimer</h3>
         <p className="py-2">
           To the maximum extent permitted by applicable law, we exclude all
           representations, warranties and conditions relating to our website and
