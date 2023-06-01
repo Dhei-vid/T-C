@@ -39,7 +39,7 @@ const Navigation = () => {
                 </h2>
                 <button
                   onClick={toggleMenu}
-                  className="text-2xl flex justify-center gap-1 align-items-center self-end"
+                  className="text-2xl flex justify-center gap-1 align-items-center self-end hover:opacity-20 duration-300 ease-in-out"
                 >
                   close
                   <span>
@@ -65,7 +65,7 @@ const Navigation = () => {
                 <ul className="col-end-3">
                   <li className="border-b-2 border-white py-8 pt-8 pl-8 text-base transition-all">
                     <a
-                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-50"
+                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-20"
                       href="about"
                     >
                       The Company
@@ -74,7 +74,7 @@ const Navigation = () => {
                   </li>
                   <li className="border-b-2 border-white py-8 pl-8 transition-all">
                     <a
-                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-50"
+                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-20"
                       href="blueprint"
                     >
                       The Blueprint
@@ -83,7 +83,7 @@ const Navigation = () => {
                   </li>
                   <li className="border-b-2 border-white py-8 pl-8 transition-all">
                     <a
-                      className="md:text-3xl text-2xl hover:underline duration-300 ease-in-out hover:opacity-50 cursor-pointer"
+                      className="md:text-3xl text-2xl hover:underline duration-300 ease-in-out hover:opacity-20 cursor-pointer"
                       href="clients"
                     >
                       The Clientele
@@ -92,7 +92,7 @@ const Navigation = () => {
                   </li>
                   <li className="border-b-2 border-white py-8 pl-8 transition-all">
                     <a
-                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-50"
+                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-20"
                       href="capabilties"
                     >
                       Our Capabilities
@@ -101,7 +101,7 @@ const Navigation = () => {
                   </li>
                   <li className="border-b-2 border-white py-8 pl-8 transition-all">
                     <a
-                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-50"
+                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-20"
                       href="insights"
                     >
                       Our Insights
@@ -110,7 +110,7 @@ const Navigation = () => {
                   </li>
                   <li className="border-b-2 border-white py-8 pl-8 transition-all">
                     <a
-                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-50"
+                      className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-20"
                       href="contact"
                     >
                       Our Contacts
