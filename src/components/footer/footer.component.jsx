@@ -17,7 +17,7 @@ const Footer = () => {
           <div className="pb-8">
             <div className="border-t-2 border-white pt-8"></div>
             <Reveal delay={0.3} y1={-25} y2={0}>
-              <a href="#">
+              <a href="/">
                 <p className="font-bold leading-none tracking-wider">
                   The Digital <br />
                   <span className="pb-8">Transformation Agency</span>
