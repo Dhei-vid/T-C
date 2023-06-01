@@ -6,7 +6,7 @@ const Overview = () => {
       <section className="pt-10 md:pr-10 px-4">
         <Reveal delay={0.6} y1={75} y2={0}>
           <div>
-            <h1 className="leading-tight font-extrabold md:text-4xl text-[1.5rem] tracking-wide">
+            <h1 className="leading-tight font-bold md:text-4xl text-[1.5rem] tracking-wide">
               Our blueprint for digital transformation below gives an overview
               of the sequence, checklist, and guides at all levels of the
               organization through the journey ensuring that no area of the
@@ -18,7 +18,7 @@ const Overview = () => {
 
       <section className="grid md:grid-cols-2 gap-x-24 pt-12">
         <div className=" border-t-2 border-black px-8 py-10">
-          <h2 className="md:text-4xl text-[1.5rem] mb-4 tracking-wide font-extrabold ">
+          <h2 className="md:text-4xl text-[1.5rem] mb-4 tracking-wide font-bold ">
             Technology
           </h2>
           <p className="max-w-md md:text-xl">
@@ -31,7 +31,7 @@ const Overview = () => {
         </div>
 
         <div className="border-t-2 border-black px-8 py-10">
-          <h2 className="md:text-4xl text-[1.5rem] mb-4 tracking-wide font-extrabold  ">
+          <h2 className="md:text-4xl text-[1.5rem] mb-4 tracking-wide font-bold  ">
             Data
           </h2>
           <p className="max-w-md md:text-xl">
@@ -45,7 +45,7 @@ const Overview = () => {
         </div>
 
         <div className="border-t-2 border-black px-8 py-10">
-          <h2 className="md:text-4xl text-[1.5rem] mb-4 tracking-wide font-extrabold">
+          <h2 className="md:text-4xl text-[1.5rem] mb-4 tracking-wide font-bold">
             Process
           </h2>
           <p className="max-w-md md:text-xl">
@@ -58,7 +58,7 @@ const Overview = () => {
         </div>
 
         <div className="border-t-2 border-black px-8 py-10">
-          <h2 className="md:text-4xl text-[1.5rem] mb-4 tracking-wide font-extrabold  ">
+          <h2 className="md:text-4xl text-[1.5rem] mb-4 tracking-wide font-bold">
             Culture
           </h2>
           <p className="max-w-md md:text-xl">
