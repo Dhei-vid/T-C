@@ -1,4 +1,4 @@
-import { useCallback } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const InsightPreview = ({
@@ -10,19 +10,24 @@ const InsightPreview = ({
   moreInsights,
 }) => {
   const navigate = useNavigate();
+  const [colVal, setColVal] = useState(colsNo);
+
+  useEffect(() => {
+    setColVal(colsNo);
+  }, [colVal]);
 
   const redirect = useCallback((link) => navigate(link));
 
   return (
     <>
-      <div className={`grid grid-cols-${colsNo} gap-x-1 pt-10`}>
+      <div className={`grid md:grid-cols-${colVal} gap-x-1 pt-10`}>
         {/* first grid item */}
         <div
           className={`w-full min-h-[65vh] bg-[url('https://digitalesque.xyz/static/17776059feb6f8c551fe240c7874e6da/677ad/art1.webp')] bg-cover bg-center ${firstCol}`}
         >
           <div
             onClick={() => redirect("/insights/africa-digital")}
-            className={`h-[65vh] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black`}
+            className={`h-[100%] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black`}
           >
             <h3 className="md:text-3xl text-2xl font-bold tracking-wider mb-3 hover:underline">
               Tuning into Africa's Digital Transformation
@@ -36,7 +41,7 @@ const InsightPreview = ({
         >
           <div
             onClick={() => redirect("/insights/lessons-from-india")}
-            className={`min-h-[65vh] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black `}
+            className={`h-[100%] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black `}
           >
             <h3 className="md:text-3xl text-2xl font-bold tracking-wider mb-3 hover:underline">
               Digital Transformation in Africa: three lessons from India's
@@ -51,7 +56,7 @@ const InsightPreview = ({
         >
           <div
             onClick={() => redirect("/insights/promises")}
-            className={`h-[65vh] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black`}
+            className={`h-[100%] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black`}
           >
             <h3 className="md:text-3xl text-2xl font-bold tracking-wider mb-3 hover:underline">
               The Promises and perils of Africa's digital revolution
@@ -65,7 +70,7 @@ const InsightPreview = ({
         >
           <div
             onClick={() => redirect("/insights/jack-of-all-trades")}
-            className={`h-[65vh] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black`}
+            className={`h-[100%] grid content-end justify-items-start text-white px-6 cursor-pointer transition ease-out delay-100 group hover:text-gray-400 bg-gradient-to-t from-black`}
           >
             <h3 className="md:text-3xl text-2xl font-bold tracking-wider mb-3 hover:underline">
               Improving Africa's digital innovation ecosystem: five ways forward
