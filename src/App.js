@@ -1,11 +1,12 @@
 import { Routes, Route } from "react-router-dom";
 
 import Navigation from "./components/navigation/navigation.component";
+import ContactPreview from "./components/contact-preview/contact.preview.component";
 import Home from "./routes/home/home.components";
 import OverviewPreview from "./components/overview-preview/overview.preview.component";
 import Capabilities from "./routes/capabilities/capabilties.component";
 import Insight from "./routes/insight/insight.component";
-import ContactPreview from "./components/contact-preview/contact.preview.component";
+import Contact from "./routes/contact/contact.component";
 import Footer from "./components/footer/footer.component";
 import Client from "./routes/clients/clients.component";
 import TermsAndConditions from "./routes/termsandconditions/termsandcondition.component";
@@ -31,6 +32,7 @@ function App() {
             <Route path="terms" element={<TermsAndConditions />} />
             <Route path="privacy" element={<Privacy />} />
             <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
             <Route path="blueprint" element={<Blueprint />} />
             <Route path="/insights" element={<Insight />} />
             <Route
