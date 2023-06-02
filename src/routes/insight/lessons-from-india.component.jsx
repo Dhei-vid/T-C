@@ -33,7 +33,7 @@ const LessonsFromIndia = () => {
     <>
       {/* INTRO */}
       <div className="md:px-44 px-6">
-        <div className="px-6 mb-8">
+        <div className="mb-8">
           <Reveal delay={0.5} y1={-50} y2={0}>
             <div className="px-6">
               <p
@@ -46,7 +46,7 @@ const LessonsFromIndia = () => {
                 Digital Transformation in Africa: three lessons from India's
                 experience
               </h2>
-              <p className="pb-6">Posted October 02, 2022</p>
+              <p className="pb-6 pt-2">Posted October 02, 2022</p>
             </div>
           </Reveal>
           <div className="border-b-2 border-black"></div>
