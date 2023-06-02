@@ -46,7 +46,7 @@ const Capabilities = () => {
             <div
               className={`flex flex-col justify-center md:px-10 px-6 content-end overlay transition-transform duration-500 ease-in-out transform  ${
                 text4
-                  ? "md:translate-y-[75%] translate-y-[40%]"
+                  ? "md:translate-y-[60%] translate-y-[40%]"
                   : "translate-y-full h-[72vh]"
               }`}
             >
