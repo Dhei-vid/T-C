@@ -35,7 +35,11 @@ const Capabilities = () => {
 
       {/* GRID ITEMS */}
       <div className="grid md:grid-cols-2 pt-10">
-        <CapabilitiesGridImages />
+        <CapabilitiesGridImages
+          translate1={"95%"}
+          translate2={"90%"}
+          translate3={"90%"}
+        />
 
         <div className="relative text-white overflow-hidden w-full h-[80vh] bg-[url('https://digitalesque.xyz/static/ae893a2dff3e538a678b494e9561958f/0de74/pe.webp')] bg-cover bg-center">
           <div className="h-[80vh] bg-gradient-to-t from-black via-transparent to-transparent">
