@@ -45,7 +45,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
             </button>
             <div
               className={`grid grid-cols-1 self-center overlay transition-transform duration-300 ease-in-out transform ${
-                text1 ? "" : "h-[100vh]"
+                text1 ? "" : "h-[100%]"
               }`}
             >
               <p className="pt-5">
@@ -95,7 +95,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
             </button>
             <div
               className={`grid grid-cols-1 self-center overlay transition-transform duration-300 ease-in-out transform ${
-                text2 ? "" : "h-[100vh]"
+                text2 ? "" : "h-[100%]"
               }`}
             >
               <p className="pt-5">
@@ -148,7 +148,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
             </button>
             <div
               className={`grid grid-cols-1 self-center overlay transition-transform duration-300 ease-in-out transform ${
-                text3 ? "" : "h-[100vh]"
+                text3 ? "" : "h-[100%]"
               }`}
             >
               <p className="pt-5">
