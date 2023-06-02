@@ -5,10 +5,6 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
   const [text2, setText2] = useState(false);
   const [text3, setText3] = useState(false);
 
-  console.log(translate3);
-  console.log(translate2);
-  console.log(translate1);
-
   const onClickHandler1 = () => {
     setText1(!text1);
   };
@@ -26,7 +22,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
           <div
             className={`flex flex-col justify-center md:px-10 px-6 content-end overlay transition-transform duration-300 ease-in-out transform  ${
               text1
-                ? `md:${translate1} translate-y-[50%]`
+                ? `${translate1} translate-y-[50%]`
                 : "translate-y-full h-[72vh]"
             }`}
           >
@@ -76,7 +72,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
           <div
             className={`absolute flex flex-col justify-center md:px-10 px-6 content-end overlay transition-transform duration-300 ease-in-out transform  ${
               text2
-                ? `md:${translate2} translate-y-[50%]`
+                ? `${translate2} translate-y-[50%]`
                 : "translate-y-full h-[72vh]"
             }`}
           >
@@ -129,7 +125,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
           <div
             className={`flex flex-col justify-center md:px-10 px-4 content-end overlay transition-transform duration-300 ease-in-out transform  ${
               text3
-                ? `md:${translate3} translate-y-[50%]`
+                ? `${translate3} translate-y-[40%]`
                 : "translate-y-full h-[72vh]"
             }`}
           >

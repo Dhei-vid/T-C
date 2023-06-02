@@ -13,9 +13,9 @@ const CapabiltiesPreview = () => {
       </div>
 
       <CapabilitiesGridImages
-        translate1={"translate-y-[50%]"}
-        translate2={"translate-y-[%50]"}
-        translate3={"translate-y-[25%]"}
+        translate1={`md:translate-y-[50%]`}
+        translate2={`md:translate-y-[50%]`}
+        translate3={`md:translate-y-[25%]`}
       />
 
       <div className="md:col-end-4 underline justify-self-end hover:text-gray-500 text-lg md:text-xl py-10 md:pr-[40%] pr-6">
