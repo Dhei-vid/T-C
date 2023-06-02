@@ -20,7 +20,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
       <div className="relative text-white overflow-hidden w-full h-[80vh] bg-[url('https://images.pexels.com/photos/7690162/pexels-photo-7690162.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')] bg-cover bg-center">
         <div className="h-[80vh] bg-gradient-to-t from-black via-transparent to-transparent">
           <div
-            className={`flex flex-col justify-center md:px-10 px-6 content-end overlay transition-transform duration-500 ease-in-out transform  ${
+            className={`flex flex-col justify-center md:px-10 px-6 content-end overlay transition-transform duration-300 ease-in-out transform  ${
               text1
                 ? `md:translate-y-[${translate1}] translate-y-[50%]`
                 : "translate-y-full h-[72vh]"
@@ -30,7 +30,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
               onClick={onClickHandler1}
               className="flex w-full justify-between items-center text-2xl font-extrabold text-white"
             >
-              <p>Data Science Consulting</p>
+              <p>Digital Advisory</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
@@ -70,7 +70,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
       <div className="relative text-white overflow-hidden w-full h-[80vh] bg-[url('https://images.pexels.com/photos/6393342/pexels-photo-6393342.jpeg?auto=compress&cs=tinysrgb&w=600')] bg-cover bg-center">
         <div className="h-[80vh] bg-gradient-to-t from-black via-transparent to-transparent">
           <div
-            className={`flex flex-col justify-center md:px-10 px-6 content-end overlay transition-transform duration-500 ease-in transform  ${
+            className={`flex flex-col justify-center md:px-10 px-6 content-end overlay transition-transform duration-300 ease-in transform  ${
               text2
                 ? `md:translate-y-[${translate2}] translate-y-[60%]`
                 : "translate-y-full h-[72vh]"
@@ -94,7 +94,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
               </svg>
             </button>
             <div
-              className={`grid grid-cols-1 self-center overlay transition-transform duration-500 ease-in-out transform ${
+              className={`grid grid-cols-1 self-center overlay transition-transform duration-300 ease-in-out transform ${
                 text2 ? "" : "h-[100vh]"
               }`}
             >
@@ -133,7 +133,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
               onClick={onClickHandler3}
               className="flex w-full justify-between items-center text-2xl font-extrabold text-white"
             >
-              <p>Data Science Consulting</p>
+              <p>Digital Culture Advisory</p>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
