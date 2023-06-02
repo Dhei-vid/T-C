@@ -47,7 +47,7 @@ const Capabilities = () => {
               className={`flex flex-col justify-center md:px-10 px-6 content-end overlay transition-transform duration-500 ease-in-out transform  ${
                 text4
                   ? "md:translate-y-[60%] translate-y-[40%]"
-                  : "translate-y-full h-[93%]"
+                  : "translate-y-full h-[92%]"
               }`}
             >
               <button
@@ -69,7 +69,7 @@ const Capabilities = () => {
               </button>
               <div
                 className={`grid grid-cols-1 self-center overlay transition-transform duration-300 ease-in-out transform ${
-                  text4 ? "" : "h-[100vh]"
+                  text4 ? "" : "h-[100%]"
                 }`}
               >
                 <p className="pt-5">
