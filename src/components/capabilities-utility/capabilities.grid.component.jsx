@@ -23,7 +23,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
             className={`flex flex-col justify-center md:px-10 px-6 content-end overlay transition-transform duration-300 ease-in-out transform  ${
               text1
                 ? `${translate1} translate-y-[50%]`
-                : "translate-y-full h-[72vh]"
+                : "translate-y-full h-[92%]"
             }`}
           >
             <button
@@ -73,7 +73,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
             className={`absolute flex flex-col justify-center md:px-10 px-6 content-end overlay transition-transform duration-300 ease-in-out transform  ${
               text2
                 ? `${translate2} translate-y-[50%]`
-                : "translate-y-full h-[72vh]"
+                : "translate-y-full h-[92%]"
             }`}
           >
             <button
@@ -126,7 +126,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
             className={`flex flex-col justify-center md:px-10 px-4 content-end overlay transition-transform duration-300 ease-in-out transform  ${
               text3
                 ? `${translate3} translate-y-[40%]`
-                : "translate-y-full h-[72vh]"
+                : "translate-y-full h-[92%]"
             }`}
           >
             <button
