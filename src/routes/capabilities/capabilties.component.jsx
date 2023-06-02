@@ -37,7 +37,7 @@ const Capabilities = () => {
       <div className="grid md:grid-cols-2 pt-10">
         <CapabilitiesGridImages
           translate1={"translate-y-[80%]"}
-          translate2={"translate-y-[80%]"}
+          translate2={"translate-y-[100%]"}
           translate3={"translate-y-[70%]"}
         />
 

@@ -14,7 +14,7 @@ const CapabiltiesPreview = () => {
 
       <CapabilitiesGridImages
         translate1={"translate-y-[50%]"}
-        translate2={"translate-y-[50%]"}
+        translate2={"translate-y-[45%]"}
         translate3={"translate-y-[30%]"}
       />
 
