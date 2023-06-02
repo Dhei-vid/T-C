@@ -36,9 +36,9 @@ const Capabilities = () => {
       {/* GRID ITEMS */}
       <div className="grid md:grid-cols-2 pt-10">
         <CapabilitiesGridImages
-          translate1={"95%"}
-          translate2={"90%"}
-          translate3={"90%"}
+          translate1={"translate-y-[80%]"}
+          translate2={"translate-y-[80%]"}
+          translate3={"translate-y-[70%]"}
         />
 
         <div className="relative text-white overflow-hidden w-full h-[80vh] bg-[url('https://digitalesque.xyz/static/ae893a2dff3e538a678b494e9561958f/0de74/pe.webp')] bg-cover bg-center">

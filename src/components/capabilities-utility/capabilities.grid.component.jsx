@@ -22,7 +22,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
           <div
             className={`flex flex-col justify-center md:px-10 px-6 content-end overlay transition-transform duration-300 ease-in-out transform  ${
               text1
-                ? `md:translate-y-[${translate1}] translate-y-[50%]`
+                ? `md:${translate1} translate-y-[50%]`
                 : "translate-y-full h-[72vh]"
             }`}
           >
@@ -72,7 +72,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
           <div
             className={`flex flex-col justify-center md:px-10 px-6 content-end overlay transition-transform duration-300 ease-in transform  ${
               text2
-                ? `md:translate-y-[${translate2}] translate-y-[60%]`
+                ? `md:${translate2} translate-y-[60%]`
                 : "translate-y-full h-[72vh]"
             }`}
           >
@@ -125,7 +125,7 @@ const CapabilitiesGridImages = ({ translate1, translate2, translate3 }) => {
           <div
             className={`flex flex-col justify-center md:px-10 px-6 content-end overlay transition-transform duration-500 ease-in-out transform  ${
               text3
-                ? `md:translate-y-[${translate3}] translate-y-[40%]`
+                ? `md:${translate3} translate-y-[40%]`
                 : "translate-y-full h-[72vh]"
             }`}
           >
