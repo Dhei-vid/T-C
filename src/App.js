@@ -32,7 +32,6 @@ function App() {
             <Route path="terms" element={<TermsAndConditions />} />
             <Route path="privacy" element={<Privacy />} />
             <Route path="about" element={<About />} />
-            <Route path="contact" element={<Contact />} />
             <Route path="blueprint" element={<Blueprint />} />
             <Route path="/insights" element={<Insight />} />
             <Route
@@ -49,6 +48,7 @@ function App() {
               element={<JackOfAllTrades />}
             />
           </Route>
+          <Route path="contact" element={<Contact />} />
         </Route>
       </Route>
     </Routes>
