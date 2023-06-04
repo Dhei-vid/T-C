@@ -24,7 +24,7 @@ const Blueprint = () => {
 
   return (
     <>
-      <div className="md:px-44 px-6 pb-12">
+      <div className="md:px-44 px-6">
         <Reveal delay={0.5} y1={-50} y2={0}>
           <h1 className="md:text-7xl text-[3rem] font-bold leading-none tracking-wider">
             The Blueprint
