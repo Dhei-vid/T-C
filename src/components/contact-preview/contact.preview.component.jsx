@@ -17,7 +17,7 @@ const ContactPreview = () => {
         <div className="px-4 pt-6 md:pl-[48vw] border-t-2 border-black pt-8"></div>
         <Reveal>
           <div className="grid px-4 pt-6 md:pl-[65%] pl-[45%] md:text-xl text-base">
-            <h4 className="">Can we do business?</h4>
+            <h4 className="text-2xl">Can we do business?</h4>
             <a
               className="underline cursor-pointer hover:text-gray-500"
               href="mailto:office@thecorporation.xyz"
