@@ -93,7 +93,7 @@ const Navigation = () => {
                   <li className="border-b-2 border-white py-8 pl-8 transition-all">
                     <a
                       className="md:text-3xl text-2xl hover:underline cursor-pointer duration-300 ease-in-out hover:opacity-20"
-                      href="capabilties"
+                      href="capabilities"
                     >
                       Our Capabilities
                     </a>
